@@ -1,4 +1,18 @@
 <!doctype html>
-<script type="text/javascript" src="https://livejs.com/live.js"></script>
-<h1>hello there</h1>
-testing
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="https://livejs.com/live.js"
+        ></script>
+    </head>
+    <body>
+        <h1>welkom to the thinker</h1>
+        {% for thought in thoughts %}
+            {{ thought.msg }}
+            {% if not loopcount.last%}
+                <br />
+            {% endif %}
+        {% endfor %}
+    </body>
+</html>
